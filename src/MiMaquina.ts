@@ -71,7 +71,7 @@ class Maquina extends MaquinaProducto implements IOperaciones {
 
     while (bandera) {
       this.cantidadProducto();
-      if ((this.accesoProducto.price*this.cantidad) <= dinero) {
+      if ((this.accesoProducto.price * this.cantidad) <= dinero) {
         let devolucion = dinero - this.accesoProducto.price;
 
         console.log("***Venta Existosa***");
@@ -147,7 +147,7 @@ class MiMaquina extends Maquina implements IMenuMaquina {
 
   salir(): string {
     console.log("Quiere seguir en nuestra aplicacion, digite 'si' para continuar, 'no' para salir");
-    
+
     this.instruccion = scanf("%s");
 
     return this.instruccion;
@@ -178,15 +178,15 @@ todaySold.creacionProducto({
 
 let bandera = "si";
 console.log("***BIENVENIDO A NUESTRA MAQUINA EXPENDEDORA***");
-while(bandera==="si"){
-    todaySold.verProductos();
-    
-    todaySold.seleccionarProducto();
-    
-    todaySold.ingresarBillete();
-    
-    let instruccion = todaySold.salir();
-    
-    bandera = instruccion;
+while (bandera === "si") {
+  todaySold.verProductos();
+
+  todaySold.seleccionarProducto();
+
+  todaySold.ingresarBillete();
+
+  let instruccion = todaySold.salir();
+
+  bandera = instruccion;
 }
 console.log("Gracias por utilizar nuestra maquina, vuelva pronto");
